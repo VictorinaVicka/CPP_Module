@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 16:22:19 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/10/22 16:12:14 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/10/22 17:52:40 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,40 @@ void Phone::start(void)
 
 void Phone::table(void)
 {
-	std::cout << "|     index|firsst name| last name|  nickname|" << '\n';
+	std::cout << "|     index|first name| last name|  nickname|" << '\n';
 	for (int i = 0; i < this->contact; i++)
 	{
-		this->contacts[i].taple();
+		this->contacts[i].table();
 		std::cout << "|          |          |          |          |" << '\n';
 	}
 }
 
 void Phone::add(void)
 {
-	// if (this->contacts[this->contact].print(this->contact + 1))
-	// 	this->contact++;
-	// else if (this->contact == 8)
-	// 	std::cout << "This program cannot store more than 8 contacts" << '\n';
+	if (this->contacts[this->contact].data(this->contact + 1))
+		this->contact++;
+	else if (this->contact == 8)
+		std::cout << "This program cannot store more than 8 contacts" << '\n';
 }
 
 void Phone::search(void)
 {
+	int	i;
 
+	if (this->contact == 0)
+		std::cout << "Is empty" << '\n';
+	else
+	{
+		this->table();
+		std::cout << "Index: ";
+		while (!(std::cin >> i) || (i < 0 || i > this->contact))
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits < std::streamsize > ::max(), '\n');
+			std::cout << "invalide index. Try once more: ";
+		}
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		if (i > 0)
+			this->contacts[i - 1].print();
+	}
 }

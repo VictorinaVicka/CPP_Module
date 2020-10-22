@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 11:02:04 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/10/22 16:13:32 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/10/22 16:49:06 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ private:
 public:
 	Phonebook();
 
-	void	taple(void);
+	void	table(void);
 	void	print(void);
 	bool	data(int i);
 };

@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 16:02:59 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/10/22 16:31:17 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/10/22 17:54:34 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Phonebook::Phonebook()
 	this->i = 0;
 }
 
-void Phonebook::taple()
+void Phonebook::table()
 {
 	std::cout << "|" << std::setw(10) << this->i;
 	for (int i = 0; i <= 2; i++)
@@ -61,5 +61,20 @@ void Phonebook::print()
 bool Phonebook::data(int i)
 {
 	this->i = i;
+	for (int i = 0; i <= 10; i++)
+	{
+		std::cout << fields[i] << ": ";
+		std::getline(std::cin, this->info[i]);
+	}
+	size_t len = 0;
+
+	for (int i = 0; i <= 10; i++)
+		len += this->info[i].length();
+	if (len == 0)
+	{
+		std::cout << "Enough!" << '\n';
+		return (false);
+	}
+	std::cout << "All fields are filled!" << '\n';
 	return (true);
 }
