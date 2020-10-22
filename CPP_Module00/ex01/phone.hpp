@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 15:40:56 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/10/21 17:01:35 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/10/22 13:12:20 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 class Phone
 {
 private:
-	Phonebook	phonebook[8];
+	Phonebook	contacts[8];
+	int			contact;
 public:
 	Phone();
 	void start(void);
-	void exit(void);
+	void table(void);
 	void add(void);
 	void search(void);
 };

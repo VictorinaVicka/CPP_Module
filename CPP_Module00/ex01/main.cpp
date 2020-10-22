@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 16:23:04 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/10/21 17:40:34 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/10/22 16:32:25 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int main(void)
 		std::getline(std::cin, str);
 		if (str == "EXIT")
 			break ;
-		else if (str == "ADD")
-			phone.add();
+		// else if (str == "ADD")
+		// 	phone.add();
 		else if (str == "SEARCH")
 			phone.search();
 		else

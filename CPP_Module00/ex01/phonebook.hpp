@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 11:02:04 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/10/21 17:31:07 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/10/22 16:13:32 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,11 @@ class Phonebook
 {
 private:
 	int		i;
-	const	std::string fields[11] = {
-		"first name",
-		"last name",
-		"nickname",
-		"login",
-		"postal address",
-		"email address",
-		"phone number",
-		"birthday date",
-		"favorite meal",
-		"underwear color",
-		"darkest secret"
-	};
-
+	std::string info[11];
+	static const std::string fields[];
 public:
 	Phonebook();
+
 	void	taple(void);
 	void	print(void);
 	bool	data(int i);

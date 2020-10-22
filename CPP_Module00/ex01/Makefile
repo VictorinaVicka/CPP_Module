@@ -6,7 +6,7 @@
 #    By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/15 15:57:38 by tfarenga          #+#    #+#              #
-#    Updated: 2020/10/21 16:27:12 by tfarenga         ###   ########.fr        #
+#    Updated: 2020/10/22 16:30:34 by tfarenga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CLANG = clang++
 
 FLAG = -Wall -Wextra -Werror
 
-HEADERS = phonebook.hpp phone.hpp
+HEADERS =  phonebook.hpp phone.hpp
 
 SRC = phonebook.cpp phone.cpp main.cpp
 
