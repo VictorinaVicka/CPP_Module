@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/21 16:23:04 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/10/22 16:56:23 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/10/23 12:30:16 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ int main(void)
 			phone.add();
 		else if (str == "SEARCH")
 			phone.search();
-		else
-			continue ;
 	}
 	return (0);
 }

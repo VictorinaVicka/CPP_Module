@@ -6,13 +6,13 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/15 16:02:59 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/10/22 17:54:34 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/10/23 12:43:06 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "phonebook.hpp"
 
-std::string const Phonebook::fields[] = {
+std::string const Phonebook::fields[11] = {
 		"first name",
 		"last name",
 		"nickname",
@@ -28,7 +28,7 @@ std::string const Phonebook::fields[] = {
 
 Phonebook::Phonebook()
 {
-	for (int i = 0; i <= 0; i++)
+	for (int i = 0; i <= 10; i++)
 		this->info[i] = std::string();
 	this->i = 0;
 }
@@ -53,7 +53,6 @@ void Phonebook::table()
 
 void Phonebook::print()
 {
-	std::cout << "Contact №: " << '\n';
 	for (int i = 0; i <= 10; i++)
 		std::cout << Phonebook::fields[i] << ": " << this->info[i] << '\n';
 }
@@ -61,13 +60,13 @@ void Phonebook::print()
 bool Phonebook::data(int i)
 {
 	this->i = i;
+	size_t len = 0;
+
 	for (int i = 0; i <= 10; i++)
 	{
 		std::cout << fields[i] << ": ";
 		std::getline(std::cin, this->info[i]);
 	}
-	size_t len = 0;
-
 	for (int i = 0; i <= 10; i++)
 		len += this->info[i].length();
 	if (len == 0)
