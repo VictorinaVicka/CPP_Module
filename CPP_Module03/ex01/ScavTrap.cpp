@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:43:53 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/25 16:56:19 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/11/25 17:06:48 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ ScavTrap::ScavTrap()
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor ScavTrap called" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string newName)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default constructor ScavTrap called" << std::endl;
 	hitPoints = 100;
 	maxHitPoints = 100;
 	energyPoints = 50;

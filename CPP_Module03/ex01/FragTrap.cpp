@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:43:44 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/25 15:49:42 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/11/25 17:06:26 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ FragTrap::FragTrap()
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor FragTrap called" << std::endl;
 }
 
 FragTrap::FragTrap(std::string newName)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default constructor FragTrap called" << std::endl;
 	hitPoints = 100;
 	maxHitPoints = 100;
 	energyPoints = 100;
