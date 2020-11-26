@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 17:03:48 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/25 18:45:14 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/11/26 13:12:48 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 int main (void)
 {
 	srand(time(0));
-	FragTrap name("Tfarenga");
+	FragTrap name("Frag");
 	ScavTrap name_1("Scav");
 	NinjaTrap ninja("Ninja");
 
-	std::cout << "<Tfarenga>" << std::endl;
+	std::cout << "<Frag>" << std::endl;
 	name.takeDamage(20);
 	name.beRepaired(10);
 	name.beRepaired(20);
@@ -51,7 +51,8 @@ int main (void)
 	ninja.rangedAttack("Michael");
 	ninja.takeDamage(115);
 	ninja.beRepaired(40);
-	ninja.ninjaShoebox();
-	ninja.ninjaShoebox();
+	ninja.ninjaShoebox(name);
+	ninja.ninjaShoebox(name_1);
+	ninja.ninjaShoebox(ninja);
 	return (0);
 }

@@ -6,14 +6,14 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 17:03:46 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/25 17:50:15 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/11/25 18:52:35 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FRAGTRAP_HPP
 # define FRAGTRAP_HPP
 
-#include "ClapTrap.hpp"
+# include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap
 {

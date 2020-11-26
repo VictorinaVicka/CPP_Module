@@ -5,26 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 13:31:04 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/26 14:19:36 by tfarenga         ###   ########.fr       */
+/*   Created: 2020/11/25 17:03:48 by tfarenga          #+#    #+#             */
+/*   Updated: 2020/11/26 13:20:48 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "FragTrap.hpp"
+#include "SuperTrap.hpp"
 
 int main (void)
 {
 	srand(time(0));
-	FragTrap name("Tfarenga");
+	FragTrap name_1 ("Frag");
+	std::cout << "<Frag>" << std::endl;
 
-	name.takeDamage(20);
-	name.beRepaired(10);
-	name.beRepaired(20);
-	name.meleeAttack("Bobby");
-	name.rangedAttack("Michael");
-	name.takeDamage(115);
-	name.beRepaired(40);
-	name.vaulthunter_dot_exe("Dobby_1");
-	name.vaulthunter_dot_exe("Dobby_2");
+	SuperTrap name_2("Super");
+	std::cout << "<Super>" << std::endl;
+	name_2.ninjaShoebox(name_1);
+	name_2.meleeAttack("Bobby");
+	name_2.rangedAttack("Michael");
+	name_2.takeDamage(115);
+	name_2.beRepaired(40);
+	name_2.vaulthunter_dot_exe("Dobby_1");
+	name_2.vaulthunter_dot_exe("Dobby_2");
+
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 17:03:40 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/26 13:15:09 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/11/26 13:22:24 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class ClapTrap
 		void beRepaired(unsigned int amount);
 		void challengeNewcomerClapTrap(void);
 
-		std::string	getName(void);
+        std::string getName(void);
 };
 
 #endif

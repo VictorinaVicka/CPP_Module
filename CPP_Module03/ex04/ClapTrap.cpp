@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 17:03:36 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/26 13:14:35 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/11/25 18:14:53 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ void ClapTrap::challengeNewcomerClapTrap(void)
 	std::cout << "FR4G-TP <" << name << ">: " << attacks[rand() % 5] << std::endl;
 }
 
-std::string	ClapTrap::getName(void)
+std::string ClapTrap::getName(void)
 {
-	return (this->name);
+    return (this->name);
 }

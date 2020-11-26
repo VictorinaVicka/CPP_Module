@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NinjaTrap.hpp                                      :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/25 18:30:37 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/26 12:54:16 by tfarenga         ###   ########.fr       */
+/*   Created: 2020/11/25 17:03:55 by tfarenga          #+#    #+#             */
+/*   Updated: 2020/11/25 17:34:08 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NINJATRAP_HPP
-# define NINJATRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # include "ClapTrap.hpp"
-# include "FragTrap.hpp"
-# include "ScavTrap.hpp"
 
-class NinjaTrap : public ClapTrap
+class ScavTrap : public ClapTrap
 {
 	public:
-		NinjaTrap();
-		~NinjaTrap();
-		NinjaTrap(std::string newName);
-		NinjaTrap(const NinjaTrap &target);
-		NinjaTrap &operator = (const NinjaTrap &target);
+		ScavTrap();
+		~ScavTrap();
+		ScavTrap(std::string newName);
+		ScavTrap(const ScavTrap &target);
+		ScavTrap &operator=(const ScavTrap &target);
 
-		void ninjaShoebox(ClapTrap &target);
-		void ninjaShoebox(FragTrap &target);
-		void ninjaShoebox(ScavTrap &target);
-		void ninjaShoebox(NinjaTrap &target);
+		void challengeNewcomer(void);
 };
 
 #endif

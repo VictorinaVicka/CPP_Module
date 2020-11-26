@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   NinjaTrap.hpp                                      :+:      :+:    :+:   */
+/*   SuperTrap.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/25 18:30:37 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/26 12:54:16 by tfarenga         ###   ########.fr       */
+/*   Created: 2020/11/25 18:55:02 by tfarenga          #+#    #+#             */
+/*   Updated: 2020/11/25 21:18:49 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef NINJATRAP_HPP
-# define NINJATRAP_HPP
+#ifndef SUPERTRAP_HPP
+# define SUPERTRAP_HPP
 
-# include "ClapTrap.hpp"
 # include "FragTrap.hpp"
-# include "ScavTrap.hpp"
+# include "NinjaTrap.hpp"
+# include "ClapTrap.hpp"
 
-class NinjaTrap : public ClapTrap
+class SuperTrap : public FragTrap, public NinjaTrap
 {
 	public:
-		NinjaTrap();
-		~NinjaTrap();
-		NinjaTrap(std::string newName);
-		NinjaTrap(const NinjaTrap &target);
-		NinjaTrap &operator = (const NinjaTrap &target);
+		SuperTrap();
+		~SuperTrap();
+		SuperTrap(std::string newName);
+		SuperTrap(const SuperTrap &target);
+		SuperTrap &operator=(const SuperTrap &target);
 
-		void ninjaShoebox(ClapTrap &target);
-		void ninjaShoebox(FragTrap &target);
-		void ninjaShoebox(ScavTrap &target);
-		void ninjaShoebox(NinjaTrap &target);
+		void meleeAttack(std::string const &target);
+    	void rangedAttack(std::string const &target);
 };
 
 #endif

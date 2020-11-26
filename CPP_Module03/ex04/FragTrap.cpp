@@ -5,26 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/20 13:30:54 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/11/26 14:16:56 by tfarenga         ###   ########.fr       */
+/*   Created: 2020/11/25 17:03:43 by tfarenga          #+#    #+#             */
+/*   Updated: 2020/11/25 18:15:11 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+#include "ClapTrap.hpp"
 
 FragTrap::FragTrap()
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default constructor FragTrap called" << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Destructor FragTrap called" << std::endl;
 }
 
 FragTrap::FragTrap(std::string newName)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Default constructor FragTrap called" << std::endl;
 	hitPoints = 100;
 	maxHitPoints = 100;
 	energyPoints = 100;
@@ -52,41 +53,6 @@ FragTrap &FragTrap::operator = (const FragTrap &target)
 	rangedAttackDamage = target.rangedAttackDamage;
 	armorDamageReduction = target.armorDamageReduction;
 	return(*this);
-}
-
-void FragTrap::rangedAttack(std::string const &target)
-{
-	std::cout << "FR4G-TP <" << name << "> attacks <" << target
-	<< "> at range, causing " << rangedAttackDamage << " points of damage!"
-	<< std::endl;
-}
-
-void FragTrap::meleeAttack(std::string const &target)
-{
-	std::cout << "FR4G-TP <" << name << "> attacks <" << target
-	<< "> at range, causing " << meleeAttackDamage << " points of damage!"
-	<< std::endl;
-}
-
-void FragTrap::takeDamage(unsigned int amount)
-{
-	int resu;
-
-	amount -= armorDamageReduction;
-	amount = (amount < 0 ? 0 : amount);
-	resu = ((int)(hitPoints - amount) < 0 ? hitPoints : amount);
-	hitPoints -= resu;
-	std::cout << "FR4G-TP <" << name << "> takes " << resu << " points of damage! And now it you "
-		<< hitPoints << " points! " << std::endl;
-}
-
-void FragTrap::beRepaired(unsigned int amount)
-{
-	unsigned int resu = 0;
-
-	resu = (hitPoints + resu > maxHitPoints ? maxHitPoints - hitPoints : amount);
-	hitPoints = (hitPoints + amount > maxHitPoints ? maxHitPoints : hitPoints + amount);
-	std::cout << "FR4G-TP <" << name << "> was repired, on " << resu << " points! Energy points: " << hitPoints << std::endl;
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const &target)
