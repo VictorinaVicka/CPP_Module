@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 13:49:07 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/12/04 16:26:30 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/12/04 16:28:25 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-	std::string		filename;
+	std::string		nameFile;
 	std::ofstream	ofs;
 	std::string		tree[1] = {
 	"         A\n" \
@@ -49,8 +49,8 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 	"        ##\n"};
 
 	Form::execute(executor);
-	filename = target + "_shrubbery";
-	ofs.open(filename);
+	nameFile = target + "_shrubbery";
+	ofs.open(nameFile);
 	if (!ofs.is_open())
 		return ;
 	ofs << tree[0];
