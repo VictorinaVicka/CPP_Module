@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 13:49:04 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/12/04 15:46:57 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/12/04 16:35:56 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class RobotomyRequestForm : public Form
 		RobotomyRequestForm(std::string &target);
 		~RobotomyRequestForm();
 		RobotomyRequestForm(RobotomyRequestForm const &copy);
-		RobotomyRequestForm& operator=(RobotomyRequestForm const &ref);
+		RobotomyRequestForm& operator=(RobotomyRequestForm const &target);
 		void	execute(Bureaucrat const &executor) const;
 };
 

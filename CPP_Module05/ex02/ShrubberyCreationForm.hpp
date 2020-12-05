@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 13:49:11 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/12/04 15:40:32 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/12/04 16:35:50 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ShrubberyCreationForm : public Form
 		ShrubberyCreationForm(std::string &target);
 		~ShrubberyCreationForm();
 		ShrubberyCreationForm(ShrubberyCreationForm const &copy);
-		ShrubberyCreationForm& operator=(ShrubberyCreationForm const &ref);
+		ShrubberyCreationForm& operator=(ShrubberyCreationForm const &target);
 		void	execute(Bureaucrat const &executor) const;
 
 		class FileOpenException: public std::exception

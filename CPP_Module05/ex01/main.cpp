@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 13:08:26 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/12/03 20:47:43 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/12/04 13:35:22 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,6 @@
 
 int main(void)
 {
-	try
-	{
-		Form form("Form", 0, 3);
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	try
-	{
-		Form form("Form", 1, 151);
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-
 	try
 	{
 		Bureaucrat dobby("Dobby", 16);
@@ -51,5 +34,23 @@ int main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+
+	try
+	{
+		Form form("Form", 0, 3);
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	try
+	{
+		Form form("Form", 1, 151);
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
 	return (0);
 }
