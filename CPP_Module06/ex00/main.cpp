@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 16:03:47 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/12/08 16:43:35 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/12/08 18:01:19 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int main(int argc, char **argv)
 		Cast cast(argv[1]);
 
 		cast.getInt();
+		cast.getFloat();
 	}
 }

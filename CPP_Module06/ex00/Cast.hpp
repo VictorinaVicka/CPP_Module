@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 16:03:44 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/12/08 16:39:58 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/12/08 18:01:09 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ class	Cast
 		Cast(const Cast &copy);
 		Cast	&operator=(const Cast &target);
 		void	getInt(void);
+		void	getFloat(void);
 		// void	getChar(void);
-		// void	getFloat(void);
 		// void	getDouble(void);
 
 };

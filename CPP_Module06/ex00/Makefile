@@ -6,11 +6,11 @@
 #    By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/08 16:03:50 by tfarenga          #+#    #+#              #
-#    Updated: 2020/12/08 16:41:50 by tfarenga         ###   ########.fr        #
+#    Updated: 2020/12/08 17:32:07 by tfarenga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = cast
+NAME = convert
 
 CLANG = clang++
 
