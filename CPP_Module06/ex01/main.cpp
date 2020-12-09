@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 16:14:47 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/12/09 17:25:31 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/12/09 18:22:48 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,14 @@ void *serialize(void)
 		str[i] = randomAlpha[rand() % (sizeof(randomAlpha) - 1)];
 		std::cout << str[i];
 	}
+	std::cout << "|";
+
 	*reinterpret_cast<int*>(str + 8) = rand();
-	std::cout << *reinterpret_cast<int*>(str + 8);
-	for (int i = 0; i < 8; i++)
+	std::cout << *reinterpret_cast<int*>(str + 8) << "|";
+
+	for (int i = 12; i < 20; i++)
 	{
-		str[i + 12] = randomAlpha[rand() % (sizeof(randomAlpha) - 1)];
+		str[i] = randomAlpha[rand() % (sizeof(randomAlpha) - 1)];
 		std::cout << str[i];
 	}
 	std::cout << std::endl;
