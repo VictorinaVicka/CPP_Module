@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 19:07:51 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/12/09 20:20:42 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/12/10 18:47:52 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,20 @@ Base *generate(void)
 	int random = rand() % 3;
 
 	if (random == 0)
-		return new A;
+		{
+			std::cout << "Clss A!" << std::endl;
+			return new A;
+		}
 	else if (random == 1)
-		return new B;
+		{
+			std::cout << "Clss B!" << std::endl;
+			return new B;
+		}
 	else
-		return new C;
+		{
+			std::cout << "Clss C!" << std::endl;
+			return new C;
+		}
 }
 
 void identify_from_pointer(Base *p)
@@ -48,12 +57,32 @@ void identify_from_pointer(Base *p)
 
 void identify_from_reference(Base &p)
 {
-	if (dynamic_cast<A*>(&p) != NULL)
+	try
+	{
+		A &refA = dynamic_cast<A&>(p);
+		(void)refA;
 		std::cout << "A" << std::endl;
-	else if (dynamic_cast<B*>(&p) != NULL)
+	}
+	catch(const std::exception& e)
+	{}
+
+	try
+	{
+		B &refB = dynamic_cast<B&>(p);
+		(void)refB;
 		std::cout << "B" << std::endl;
-	else if (dynamic_cast<C*>(&p) != NULL)
+	}
+	catch(const std::exception& e)
+	{}
+
+	try
+	{
+		C &refC = dynamic_cast<C&>(p);
+		(void)refC;
 		std::cout << "C" << std::endl;
+	}
+	catch(const std::exception& e)
+	{}
 }
 
 int main(void)
@@ -61,11 +90,13 @@ int main(void)
 	srand(time(NULL));
 
 	Base *base = generate();
-	Base *rnd = generate();
 
 	identify_from_pointer(base);
 	identify_from_reference(*base);
 	std::cout << "<<<<<>>>>>" << std::endl;
+
+	Base *rnd = generate();
+
 	identify_from_pointer(rnd);
 	identify_from_reference(*rnd);
 

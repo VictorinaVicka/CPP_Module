@@ -6,7 +6,7 @@
 /*   By: tfarenga <tfarenga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 16:03:40 by tfarenga          #+#    #+#             */
-/*   Updated: 2020/12/08 19:31:40 by tfarenga         ###   ########.fr       */
+/*   Updated: 2020/12/10 18:10:06 by tfarenga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ Cast &Cast::operator=(const Cast &target)
 void	Cast::getInt(void)
 {
 	std::cout << "int: ";
-	// if (newType.length() == 1 && isprint(newType[0]) && !isdigit(newType[0]))
-	// 		std::cout << "int: " << static_cast<int>(newType[0]) << std::endl;
 	try
 	{
 		std::cout << std::stoi(newType) << std::endl;
@@ -49,8 +47,6 @@ void	Cast::getInt(void)
 void Cast::getFloat(void)
 {
 	std::cout << "float: ";
-	// if (newType.length() == 1 && isprint(newType[0]) && !isdigit(newType[0]))
-	// 		std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(newType[0]) << "f" << std::endl;
 	try
 	{
 		float flt = 0;
@@ -70,9 +66,6 @@ void Cast::getFloat(void)
 void Cast::getDouble(void)
 {
 	std::cout << "double: ";
-
-	// if (newType.length() == 1 && isprint(newType[0]) && !isdigit(newType[0]))
-	// 		std::cout << "double: " << std::fixed << std::setprecision(1) << static_cast<double>(newType[0]) << std::endl;
 
 	try
 	{
@@ -96,9 +89,6 @@ void Cast::getChar(void)
 	std::cout << "char: ";
 	int str;
 
-	// if (newType.length() == 1 && isprint(newType[0]) && !isdigit(newType[0]))
-	// 	std::cout << "char: " << "'" << newType[0] << "'" << std::endl;
-
 	try
 	{
 		str = std::stoi(newType);
@@ -107,7 +97,7 @@ void Cast::getChar(void)
 			std::cout << "'" << static_cast<char>(str) << "'" << std::endl;
 		else
 		{
-			std::cout << "impossible~" << std::endl;
+			std::cout << "Non displayable" << std::endl;
 			return ;
 		}
 	}
